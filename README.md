@@ -34,6 +34,58 @@ To run the Quiz Game, ensure the following:
 
 ---
 
+## Features
+
+- A collection of multiple-choice questions covering various topics.
+- User-friendly console-based interface.
+- Real-time feedback for correct and incorrect answers.
+- Final score summary at the end of the game.
+
+---
+
+## Planned Enhancements
+
+- Add a timer for each question to increase challenge.
+- Include support for multiple players and scoring.
+- Add categories for questions so users can select topics of interest.
+- Store high scores in a file for future reference.
+
+---
+
+## How to Add More Questions
+
+You can easily expand the Quiz Game by adding more questions to the question set. Follow these steps:
+
+1. **Locate the Question File**  
+   Open the file where the questions are stored. It is typically located in the `quiz_game/main.py` file or similar.
+
+2. **Understand the Format**  
+   The questions are usually stored as a list of dictionaries. Each dictionary represents a question and its options. For example:
+   ```python
+   questions = [
+       {
+           "question": "What is the capital of France?",
+           "options": ["Paris", "Berlin", "Madrid", "Rome"],
+           "answer": "Paris"
+       },
+       {
+           "question": "Which programming language is known as the 'language of the web'?",
+           "options": ["Python", "C++", "JavaScript", "Java"],
+           "answer": "JavaScript"
+       }
+   ]
+   ```
+
+3. **Add a New Question**  
+   To add a new question, append a new dictionary to the `questions` list.
+   ```
+
+4. **Test the Game**  
+   - Run the game to ensure your new question appears as expected.
+   - Verify that the correct answer is recognized when the corresponding option is selected.
+
+---
+
 ## Guide on How to Contribute
 
 We welcome contributions to enhance the Quiz Game! Follow the steps below to get started:
