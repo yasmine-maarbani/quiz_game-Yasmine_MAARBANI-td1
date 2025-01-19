@@ -1,10 +1,34 @@
 def main():
     print("Welcome to the Quiz Game!")
-    questions = [
-        {"question": "What is the capital of France?", "options": ["Paris", "London", "Berlin"], "answer": 1},
-        {"question": "2 + 2 equals?", "options": ["3", "4", "5"], "answer": 2},
-        {"question": "Who wrote 'Romeo and Juliet'?", "options": ["Shakespeare", "Dickens", "Hemingway"], "answer": 1}
-    ]
+
+    difficulty = input("Choose difficulty (easy, medium, hard): ").lower()
+
+    if difficulty == 'easy':
+        questions = [
+            {"question": "What is the capital of France?", "options": ["Paris", "London", "Berlin"], "answer": 1},
+            {"question": "2 + 2 equals?", "options": ["3", "4", "5"], "answer": 2}
+        ]
+    elif difficulty == 'medium':
+        questions = [
+            {"question": "What is the capital of France?", "options": ["Paris", "London", "Berlin"], "answer": 1},
+            {"question": "2 + 2 equals?", "options": ["3", "4", "5"], "answer": 2},
+            {"question": "Who wrote 'Romeo and Juliet'?", "options": ["Shakespeare", "Dickens", "Hemingway"], "answer": 1}
+        ]
+    elif difficulty == 'hard':
+        questions = [
+            {"question": "What is the capital of France?", "options": ["Paris", "London", "Berlin"], "answer": 1},
+            {"question": "2 + 2 equals?", "options": ["3", "4", "5"], "answer": 2},
+            {"question": "Who wrote 'Romeo and Juliet'?", "options": ["Shakespeare", "Dickens", "Hemingway"], "answer": 1},
+            {"question": "What is the square root of 144?", "options": ["11", "12", "13"], "answer": 2},
+            {"question": "What is 9 multiplied by 9?", "options": ["72", "81", "90"], "answer": 2}
+        ]
+    else:
+        print("Invalid difficulty level, defaulting to medium.")
+        questions = [
+            {"question": "What is the capital of France?", "options": ["Paris", "London", "Berlin"], "answer": 1},
+            {"question": "2 + 2 equals?", "options": ["3", "4", "5"], "answer": 2},
+            {"question": "Who wrote 'Romeo and Juliet'?", "options": ["Shakespeare", "Dickens", "Hemingway"], "answer": 1}
+        ]
 
     score = 0
     for q in questions:
