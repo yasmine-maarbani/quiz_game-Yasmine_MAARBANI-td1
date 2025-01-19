@@ -7,6 +7,15 @@ def main():
     ]
 
     score = 0
+    print("\nSelect difficulty level (easy/medium/hard):")
+    difficulty_level = input("Your choice: ").lower()
+
+    filtered_questions = [q for q in questions if q["difficulty"] == difficulty_level]
+
+    if not filtered_questions:
+        print(f"No questions available for difficulty level: {difficulty_level}")
+        return
+    
     for q in questions:
         print("\n" + q["question"])
         for idx, option in enumerate(q["options"], start=1):
